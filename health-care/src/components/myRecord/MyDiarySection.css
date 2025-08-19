@@ -1,0 +1,33 @@
+/* MyDiarySection styling */
+.diary-entry {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.date-time-section {
+  flex-shrink: 0;
+}
+
+.diary-content {
+  flex: 1;
+  overflow: hidden;
+  line-height: 1.2;
+  word-break: break-word;
+  min-height: 0;
+  position: relative;
+  padding-bottom: 1.2em; /* Add padding to ensure ellipsis is visible */
+}
+
+/* Ensure ellipsis is always visible */
+.diary-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1.5em;
+  height: 1.2em;
+  background: linear-gradient(to right, transparent, white 50%);
+  pointer-events: none;
+}

@@ -1,7 +1,5 @@
 import React from 'react';
-import Header from '../../components/common/Header';
-import Footer from '../../components/common/Footer';
-import ScrollButton from '../../components/common/ScrollButton';
+import PageLayout from '../../components/layout/PageLayout';
 import TopSection from '../../components/dashboard/TopSection';
 import MealCategories from '../../components/dashboard/MealCategories';
 import MealGallery from '../../components/dashboard/MealGallery';
@@ -28,9 +26,7 @@ const Dashboard: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-start items-center w-full bg-global-3">
-      <Header />
-      
+    <PageLayout className="bg-white">
       {/* Main Content */}
       <div className="flex flex-col gap-8 justify-start items-center w-full">
         
@@ -46,12 +42,7 @@ const Dashboard: React.FC = () => {
         {/* View More Button */}
         <ViewMoreButton />
       </div>
-
-      <Footer />
-      
-      {/* Scroll Button Component */}
-      <ScrollButton />
-    </div>
+    </PageLayout>
   );
 };
 

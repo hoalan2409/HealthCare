@@ -1,6 +1,7 @@
 // src/Routes.tsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MyRecord from './pages/MyRecord';
 
 // Import page components
 import Dashboard from './pages/Dashboard';
@@ -10,6 +11,7 @@ const AppRoutes = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Dashboard />} />
+        <Route path="/my-record" element={<MyRecord />} />
       </Routes>
     </Router>
   );
