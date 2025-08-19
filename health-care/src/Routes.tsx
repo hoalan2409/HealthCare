@@ -5,6 +5,7 @@ import MyRecord from './pages/MyRecord';
 
 // Import page components
 import Dashboard from './pages/Dashboard';
+import Column from './pages/Column';
 
 const AppRoutes = () => {
   return (
@@ -12,6 +13,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/my-record" element={<MyRecord />} />
+        <Route path="/column" element={<Column />} />
       </Routes>
     </Router>
   );

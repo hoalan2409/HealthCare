@@ -3,7 +3,7 @@ import type { TopSectionProps } from '../../types/Dashboard';
 
 const TopSection: React.FC<TopSectionProps> = ({ className }) => {
   return (
-    <section className="w-full bg-global-1">
+    <section className="w-full">
       <div className="w-full mx-auto">
         {/* Mobile: Stacked layout, Desktop: Side by side */}
         <div className="flex flex-col lg:flex-row justify-between items-stretch h-auto lg:h-[350px]">

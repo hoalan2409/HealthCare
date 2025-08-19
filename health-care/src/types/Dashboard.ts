@@ -3,11 +3,16 @@ export interface DashboardProps {
   className?: string;
 }
 
+// DashboardPageLayout component
+export interface DashboardPageLayoutProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
 // PageLayout component
 export interface PageLayoutProps {
   children: React.ReactNode;
   className?: string;
-  contentClassName?: string;
 }
 
 // MealCategories component

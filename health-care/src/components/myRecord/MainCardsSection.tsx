@@ -37,22 +37,24 @@ const RecommendCard: React.FC<RecommendCardProps> = ({ title, subtitle, img }) =
 
 const MainCardsSection: React.FC = () => {
   return (
-    <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 lg:gap-[48px] w-full mb-8 sm:mb-12 lg:mb-[56px]">
-      <RecommendCard
-        title="BODY RECORD"
-        subtitle="自分のカラダの記録"
-        img="/images/MyRecommend-1.jpg"
-      />
-      <RecommendCard
-        title="MY EXERCISE"
-        subtitle="自分の運動の記録"
-        img="/images/MyRecommend-2.jpg"
-      />
-      <RecommendCard
-        title="MY DIARY"
-        subtitle="自分の日記"
-        img="/images/MyRecommend-3.jpg"
-      />
+    <div className="w-full">
+      <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 lg:gap-[48px] w-full">
+        <RecommendCard
+          title="BODY RECORD"
+          subtitle="自分のカラダの記録"
+          img="/images/MyRecommend-1.jpg"
+        />
+        <RecommendCard
+          title="MY EXERCISE"
+          subtitle="自分の運動の記録"
+          img="/images/MyRecommend-2.jpg"
+        />
+        <RecommendCard
+          title="MY DIARY"
+          subtitle="自分の日記"
+          img="/images/MyRecommend-3.jpg"
+        />
+      </div>
     </div>
   );
 };

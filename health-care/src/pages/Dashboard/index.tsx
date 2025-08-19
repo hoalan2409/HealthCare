@@ -1,6 +1,5 @@
 import React from 'react';
-import PageLayout from '../../components/layout/PageLayout';
-import TopSection from '../../components/dashboard/TopSection';
+import DashboardPageLayout from '../../components/layout/DashboardPageLayout';
 import MealCategories from '../../components/dashboard/MealCategories';
 import MealGallery from '../../components/dashboard/MealGallery';
 import ViewMoreButton from '../../components/dashboard/ViewMoreButton';
@@ -26,14 +25,10 @@ const Dashboard: React.FC = () => {
   ];
 
   return (
-    <PageLayout className="bg-white">
+    <DashboardPageLayout className="bg-global-3">
       {/* Main Content */}
-      <div className="flex flex-col gap-8 justify-start items-center w-full">
-        
-        {/* Top Section - Two Static Images Side by Side */}
-        <TopSection />
-
-        {/* Bottom Section - Hexagonal Meal Categories in Single Row */}
+      <div className="flex flex-col gap-8 justify-start items-center w-full mt-[28px] sm:mt-[42px] lg:mt-[56px]">
+        {/* Meal Categories */}
         <MealCategories categories={mealCategories} />
 
         {/* Meal Gallery */}
@@ -42,7 +37,7 @@ const Dashboard: React.FC = () => {
         {/* View More Button */}
         <ViewMoreButton />
       </div>
-    </PageLayout>
+    </DashboardPageLayout>
   );
 };
 

@@ -110,37 +110,39 @@ const MyDiarySection: React.FC<MyDiarySectionProps> = ({ diaryEntries }) => {
   }, [diaryEntries]);
 
   return (
-    <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 lg:gap-[48px] w-full mb-8 sm:mb-12 lg:mb-[56px]">
-      {/* Diary Container - Same width as Main Cards */}
-      <div className="flex flex-col justify-start items-center w-full">
-        <h2 className="text-[18px] sm:text-[20px] lg:text-[22px] font-semibold leading-[22px] sm:leading-[25px] lg:leading-[27px] text-left text-gray-800 mb-6 sm:mb-8 lg:mb-[34px] self-start w-full">
-          MY DIARY
-        </h2>
+    <div className="w-full">
+      <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 lg:gap-[48px] w-full">
+        {/* Diary Container - Same width as Main Cards */}
+        <div className="flex flex-col justify-start items-center w-full">
+          <h2 className="text-[18px] sm:text-[20px] lg:text-[22px] font-semibold leading-[22px] sm:leading-[25px] lg:leading-[27px] text-left text-gray-800 mb-6 sm:mb-8 lg:mb-[34px] self-start w-full">
+            MY DIARY
+          </h2>
 
-        <div className="flex flex-row justify-start items-center w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full">
-            {diaryEntries.map((entry, index) => (
-              <div 
-                key={entry.id} 
-                ref={(el: HTMLDivElement | null) => { entryRefs.current[index] = el; }}
-                className="diary-entry flex flex-col gap-2 justify-start items-start w-full border-2 border-[#707070] bg-white p-3 sm:p-4 lg:p-[16px_14px] rounded aspect-square"
-              >
-                <div className="date-time-section flex flex-col gap-1 justify-start items-start w-full">
-                  <span className="text-[16px] sm:text-[17px] lg:text-[18px] font-normal leading-[20px] sm:leading-[21px] lg:leading-[22px] text-left text-gray-800">
-                    {entry.date}
-                  </span>
-                  <span className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-left text-gray-600">
-                    {entry.time}
-                  </span>
+          <div className="flex flex-row justify-start items-center w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full">
+              {diaryEntries.map((entry, index) => (
+                <div 
+                  key={entry.id} 
+                  ref={(el: HTMLDivElement | null) => { entryRefs.current[index] = el; }}
+                  className="diary-entry flex flex-col gap-2 justify-start items-start w-full border-2 border-[#707070] bg-white p-3 sm:p-4 lg:p-[16px_14px] rounded aspect-square"
+                >
+                  <div className="date-time-section flex flex-col gap-1 justify-start items-start w-full">
+                    <span className="text-[16px] sm:text-[17px] lg:text-[18px] font-normal leading-[20px] sm:leading-[21px] lg:leading-[22px] text-left text-gray-800">
+                      {entry.date}
+                    </span>
+                    <span className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-left text-gray-600">
+                      {entry.time}
+                    </span>
+                  </div>
+                  <p 
+                    className="text-[10px] sm:text-[11px] lg:text-[12px] font-light text-left text-gray-500 w-full diary-content"
+                    dangerouslySetInnerHTML={{ 
+                      __html: (truncatedContents[index] || entry.content).replace(/\n/g, '<br />') 
+                    }}
+                  />
                 </div>
-                <p 
-                  className="text-[10px] sm:text-[11px] lg:text-[12px] font-light text-left text-gray-500 w-full diary-content"
-                  dangerouslySetInnerHTML={{ 
-                    __html: (truncatedContents[index] || entry.content).replace(/\n/g, '<br />') 
-                  }}
-                />
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
