@@ -4,7 +4,7 @@ import MainCardsSection from '../../components/myRecord/MainCardsSection';
 import BodyRecordChart from '../../components/myRecord/BodyRecordChart';
 import MyExerciseSection from '../../components/myRecord/MyExerciseSection';
 import MyDiarySection from '../../components/myRecord/MyDiarySection';
-import ViewMoreButton from '../../components/myRecord/ViewMoreButton';
+import ViewMoreButton from '../../components/ui/ViewMoreButton';
 import type { ExerciseItem, DiaryEntry, MyRecordProps } from '../../types/MyRecord';
 
 const MyRecord: React.FC<MyRecordProps> = ({ className }) => {
@@ -163,7 +163,7 @@ const MyRecord: React.FC<MyRecordProps> = ({ className }) => {
         <MyDiarySection diaryEntries={diaryEntries} />
 
         {/* View More Button */}
-        <ViewMoreButton />
+        <ViewMoreButton text="自分の日記をもっと見る" />
       </div>
     </PageLayout>
   );

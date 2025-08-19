@@ -34,12 +34,6 @@ export interface MainCardsSectionProps {
   className?: string;
 }
 
-// View More Button interfaces
-export interface ViewMoreButtonProps {
-  className?: string;
-  onClick?: () => void;
-}
-
 // MyRecord page props
 export interface MyRecordProps {
   className?: string;

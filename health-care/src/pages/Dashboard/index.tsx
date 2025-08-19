@@ -2,7 +2,7 @@ import React from 'react';
 import DashboardPageLayout from '../../components/layout/DashboardPageLayout';
 import MealCategories from '../../components/dashboard/MealCategories';
 import MealGallery from '../../components/dashboard/MealGallery';
-import ViewMoreButton from '../../components/dashboard/ViewMoreButton';
+import ViewMoreButton from '../../components/ui/ViewMoreButton';
 import type { MealCategory, MealImage } from '../../types/Dashboard';
 
 const Dashboard: React.FC = () => {
@@ -35,7 +35,7 @@ const Dashboard: React.FC = () => {
         <MealGallery meals={mealImages} />
 
         {/* View More Button */}
-        <ViewMoreButton />
+        <ViewMoreButton text="記録をもっと見る" className="pb-8" />
       </div>
     </DashboardPageLayout>
   );

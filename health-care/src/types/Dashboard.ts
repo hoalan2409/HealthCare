@@ -40,9 +40,3 @@ export interface MealGalleryProps {
 export interface TopSectionProps {
   className?: string;
 }
-
-// ViewMoreButton component
-export interface ViewMoreButtonProps {
-  className?: string;
-  onClick?: () => void;
-}

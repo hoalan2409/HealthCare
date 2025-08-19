@@ -1,8 +1,8 @@
 import React from 'react';
 import PageLayout from '../../components/layout/PageLayout';
-import Button from '../../components/ui/Button';
-import ArticleCard from '../../components/column/ArticleCard';
 import RecommendedCategory from '../../components/column/RecommendedCategory';
+import ArticleCard from '../../components/column/ArticleCard';
+import ViewMoreButton from '../../components/ui/ViewMoreButton';
 import type { ColumnProps } from '../../types/Column';
 
 const Column: React.FC<ColumnProps> = ({ className }) => {
@@ -13,7 +13,7 @@ const Column: React.FC<ColumnProps> = ({ className }) => {
     { image: "/images/column-4.jpg", date: "2021.05.17   23:25", title: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…", tags: "#魚料理  #和食  #DHA" },
     { image: "/images/column-5.jpg", date: "2021.05.17   23:25", title: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…", tags: "#魚料理  #和食  #DHA" },
     { image: "/images/column-6.jpg", date: "2021.05.17   23:25", title: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…", tags: "#魚料理  #和食  #DHA" },
-    { image: "/images/column-7.jpg", date: "2021.05.17   23:25", title: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…", tags: "#魚料理  #和食  #DHA" },
+    { image: "/images/column-7.jpg", date: "2021.05.17   23:25", title: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…", tags: "#魚料理  #DHA" },
     { image: "/images/column-8.jpg", date: "2021.05.17   23:25", title: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…", tags: "#魚料理  #和食  #DHA" },
   ];
 
@@ -46,9 +46,8 @@ const Column: React.FC<ColumnProps> = ({ className }) => {
               ))}
             </div>
 
-            <Button className="mt-4 px-8 py-3 rounded-[5px] text-[16px] sm:text-[18px] font-light text-white bg-gradient-to-r from-[#FFCC21] to-[#FF963C]">
-              コラムをもっと見る
-            </Button>
+            {/* View More Button */}
+            <ViewMoreButton text="コラムをもっと見る" />
           </div>
         </div>
       </div>
