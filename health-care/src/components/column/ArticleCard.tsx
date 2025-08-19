@@ -12,7 +12,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ image, date, title, tags }) =
           alt="Article"
         />
         <div className="absolute bottom-1 left-0">
-          <span className="bg-[#FFCC21] px-2 py-[6px] text-[12px] sm:text-[13px] text-white leading-none">
+          <span className="bg-[#FFCC21] px-2 py-[6px] text-[12px] sm:text-[13px] lg:text-[15px] text-white leading-none">
             {date}
           </span>
         </div>
@@ -23,7 +23,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ image, date, title, tags }) =
         <p className="text-[14px] sm:text-[15px] font-normal leading-[22px] text-[#414141] line-clamp-2">
           {title}
         </p>
-        <span className="text-[11px] sm:text-[12px] text-[#FF963C]">{tags}</span>
+        <span className="text-[11px] sm:text-[12px] lg:text-[12px] text-[#FF963C]">{tags}</span>
       </div>
     </div>
   );

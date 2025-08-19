@@ -12,7 +12,7 @@ const MealCategories: React.FC<MealCategoriesProps> = ({ categories }) => {
               <HexagonBackground gradientId={`hexGradient${index}`} />
               <div className="absolute inset-0 flex flex-col justify-center items-center text-white z-10">
                 <img src={category.icon} className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] lg:w-[28px] lg:h-[28px] mb-1 lg:mb-2 filter brightness-0 invert" alt={category.name} />
-                <span className="text-[10px] sm:text-[12px] lg:text-[14px] font-normal text-center">
+                <span className="text-[10px] sm:text-[12px] lg:text-[20px] font-normal text-center">
                   {category.name}
                 </span>
               </div>
